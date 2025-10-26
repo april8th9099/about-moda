@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanwool Kim - Blog</title>
+    <!-- 
+      Link to the stylesheet ONE LEVEL UP (../) 
+      from the /posts/ directory.
+    -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <!-- Updated image path to go one level up -->
+            <img src="../images/profile_picture.jpg" alt="profile_picture" class="profile-picture">
+            <div class="header-text">
+                <h1>Hanwool Kim</h1>
+                <p>B.S. in Computer Science | Dept. of Computing</p>
+                <div class="contact-info">
+                    <!-- Updated relative paths to go one level up -->
+                    <a href="../attachments/CV.pdf" target="_blank" class="icon-button">CV</a>
+                    <a href="mailto:april8th.9099@yonsei.ac.kr" class="icon-button">Email</a>
+                    <a href="https://github.com/april8th9099" target="_blank" class="icon-button">GitHub</a>
+                    <a href="https://www.linkedin.com/in/april8th9099" target="_blank" class="icon-button">LinkedIn</a>
+                    <!-- This link now points to the current directory (the blog index) -->
+                    <a href="." class="icon-button">Blog</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Updated all nav links to point to the main page's sections -->
+        <a href="../#bio">Bio</a>
+        <a href="../#research">Research Interests</a>
+        <a href="../#education">Education</a>
+        <a href="../#honors">Honors</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#fieldwork">Field Experience</a>
+        <a href="../#tech">Technologies</a>
+        <a href="../#personal">Personal</a>
+    </nav>
+
+    <main>
+        <!-- This is the main content for your blog list page -->
+        <section id="blog-intro">
+            <h2 style="text-align: center;">My Blog</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                A collection of my thoughts and analyses on data, K-POP, sabermetrics, and technology.
+            </p>
+        </section>
+
+        <!-- 
+          POST SUMMARY 1
+          Each post summary is wrapped in its own <section> tag
+          to reuse your existing white-box styling.
+        -->
+        <section class="blog-post-summary">
+            <!-- 
+              Link to the post file (e.g., raven.html)
+              which should also be in the /posts/ folder.
+            -->
+            <a href="raven.html" style="text-decoration: none; color: inherit;">
+                <!-- 
+                  I've removed the bottom border from the H2 for a cleaner look
+                  and adjusted margins.
+                -->
+                <h2 style="border-bottom: none; margin-bottom: 0.5rem;">Why Your Database Should Run Your ML Models: A Look at Raven</h2>
+            </a>
+            <!-- A little metadata for the post -->
+            <p style="margin-top: 0; color: #666;"><em>Published: October 26, 2025</em></p>
+            
+            <!-- Re-using your .section-content layout -->
+            <div class="section-content">
+                <div class="text-box">
+                    <p>The key isn't just co-locating the model and the data. The secret is in erasing the boundary between database query processing and ML inference.</p>
+                    <p>Raven, demonstrates that an in-database approach is not only viable but can be dramatically faster than standalone frameworks</p>
+                    <!-- Re-using the .icon-button style for the "Read More" link -->
+                    <a href="raven.html" class="icon-button" style="margin-top: 1rem;">Read More</a>
+                </div>
+                <div class="image-container">
+                    <a href="raven.html">
+                        <!-- 
+                          Using a placeholder image. 
+                          You can replace this with your own image.
+                        -->
+                        <img src="postimages/raven.jpeg" alt="Placeholder image for blog post">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          POST SUMMARY 2
+          Just copy the section above to add a new post summary.
+        
+        <section class="blog-post-summary">
+            <a href="sabermetrics-deep-dive.html" style="text-decoration: none; color: inherit;">
+                <h2 style="border-bottom: none; margin-bottom: 0.5rem;">A Deep Dive into Sabermetrics</h2>
+            </a>
+            <p style="margin-top: 0; color: #666;"><em>Published: October 20, 2025</em></p>
+            
+            <div class="section-content">
+                <div class="text-box">
+                    <p>As I mentioned in my portfolio bio, sabermetrics is one of the main reasons I got into data analysis. In this post, I'll explore some key metrics (like wOBA and FIP) and analyze some recent trends in professional baseball.</p>
+                    <a href="sabermetrics-deep-dive.html" class="icon-button" style="margin-top: 1rem;">Read More</a>
+                </div>
+                <div class="image-container">
+                    <a href="sabermetrics-deep-dive.html">
+                        <img src="https://placehold.co/600x400/0056b3/fff?text=Baseball+Data" alt="Placeholder image for sabermetrics post">
+                    </a>
+                </div>
+            </div>
+        </section>
+        -->
+
+    </main>
+
+    <footer>
+        <!-- The footer is identical, no changes needed -->
+        <p>&copy; 2025 Hanwool Kim. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

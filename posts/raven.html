@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title will be replaced by your post's title -->
+    <title>Blog Post Title - Hanwool Kim</title>
+    <!-- 
+      Link to the stylesheet ONE LEVEL UP (../) 
+      from the /posts/ directory.
+    -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles just for the blog post page 
+         to make text and images look great.
+        */
+        .blog-post-content p {
+            font-size: 1.1rem; /* Slightly larger text for readability */
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-post-content img {
+            max-width: 100%; /* Make images responsive */
+            height: auto;
+            border-radius: 8px; /* Match your site's style */
+            margin: 2rem auto; /* Center images with space */
+            display: block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .blog-post-content h3 {
+            font-family: 'Roboto Slab', serif; /* Use your title font */
+            font-weight: 700; /* Make it bold */
+            font-size: 1.5rem; /* Make it larger than the text */
+            margin-top: 2.5rem;  /* Add space above the subheading */
+            margin-bottom: 1rem; /* Add a little space below it */
+            color: #333;
+        }
+
+        .blog-post-content h4 {
+            font-family: 'Roboto Slab', serif; /* Use your title font */
+            font-weight: 700; /* Make it bold */
+            font-size: 1.2rem; /* Make it larger than the text */
+            margin-top: 2rem;  /* Add space above the subheading */
+            margin-bottom: 1rem; /* Add a little space below it */
+            color: #333;
+        }
+
+        .blog-post-content ol,
+        .blog-post-content ul {
+            font-size: 1.1rem;    /* Match paragraph text */
+            line-height: 1.7;     /* Match paragraph text */
+            margin-bottom: 1.5rem;  /* Match paragraph spacing */
+            padding-left: 2.5rem;   /* Give it a clean indentation */
+        }
+
+        .blog-post-content ol {
+            list-style-type: decimal; /* This forces numbers (1, 2, 3) */
+        }
+        
+        .blog-post-content ul {
+            list-style-type: disc; /* This forces bullets (•) */
+        }
+
+        /* Add a little space between list items */
+        .blog-post-content li {
+            margin-bottom: 0.5rem; 
+        }
+
+        /* --- NEW STYLE FOR INLINE CODE --- */
+        .blog-post-content code {
+            font-family: monospace; /* Use a monospaced font */
+            background-color: #f4f4f4; /* Light grey background */
+            padding: 0.2rem 0.4rem;  /* A little padding */
+            border-radius: 4px;     /* Rounded corners */
+            font-size: 0.95rem;     /* Slightly smaller text */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <!-- Updated image path to go one level up -->
+            <img src="../images/profile_picture.jpg" alt="profile_picture" class="profile-picture">
+            <div class="header-text">
+                <h1>Hanwool Kim</h1>
+                <p>B.S. in Computer Science | Dept. of Computing</p>
+                <div class="contact-info">
+                    <!-- Updated relative paths to go one level up -->
+                    <a href="../attachments/CV.pdf" target="_blank" class="icon-button">CV</a>
+                    <a href="mailto:april8th.9099@yonsei.ac.kr" class="icon-button">Email</a>
+                    <a href="https://github.com/april8th9099" target="_blank" class="icon-button">GitHub</a>
+                    <a href="https://www.linkedin.com/in/april8th9099" target="_blank" class="icon-button">LinkedIn</a>
+                    <!-- This link now points to the blog index -->
+                    <a href="." class="icon-button">Blog</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Updated all nav links to point to the main page's sections -->
+        <a href="../#bio">Bio</a>
+        <a href="../#research">Research Interests</a>
+        <a href="../#education">Education</a>
+        <a href="../#honors">Honors</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#fieldwork">Field Experience</a>
+        <a href="../#tech">Technologies</a>
+        <a href="../#personal">Personal</a>
+    </nav>
+
+    <main>
+        <!-- 
+          This <section> reuses your existing style 
+          to create the white box for your content.
+        -->
+        <section id="blog-post" class="blog-post-content">
+            
+            <!-- 
+              BLOG POST CONTENT STARTS HERE
+            -->
+
+            <!-- Post Title -->
+            <h2>Why Your Database Should Run Your ML Models: A Look at Raven</h2>
+
+            <!-- Post Metadata -->
+            <p style="color: #666; font-style: italic;">Published: October 26, 2025</p>
+            <p style="color: #666; font-style: italic;"><a href="https://arxiv.org/abs/1911.00231"><strong>Based on:</strong> Extending Relational Query Processing with ML Inference</a></p>
+
+            <!-- A "Back to Blog" link for easy navigation -->
+            <a href="." class="icon-button" style="margin-bottom: 2rem; display: inline-block;">&larr; Back to Blog List</a>
+            
+            <p>Machine learning models are no longer niche research projects; they are core components of modern enterprise applications. As ML becomes more deeply integrated, it faces a new set of critical challenges: governance, security, auditing, and high-availability.</p>
+            <p>For decades, we have solved exact problems for data using the Relational Database Management System (RDBMS). RDBMSs are already the trusted, battle-hardened fortresses of the enterprise. So, an obvious question arises: why don't we just put our ML models inside the database?</p>
+            <p>The immediate pushback is performance. Surely, a general-purpose database engine can't compete with a dedicated, optimized framework like ONNX Runtime or TensorFlow for the complex task of ML inference.</p>
+            <p>A 2019 paper from Microsoft Research, "Extending Relational Query Processing with ML Inference," tackles this question head-on. Their answer is a resounding "yes, it can," and their system, <strong>Raven</strong>, demonstrates that an in-database approach is not only viable but can be dramatically faster than standalone frameworks, showing speedups of up to <strong>24x</strong>.</p>
+
+            <h3>The Problem with Existing Silos</h3>
+            <p>The typical way ML inference is served today looks something like this:</p>
+            <ol>
+                <li>An application needs a prediction.</li>
+                <li>It queries a database (e.g., <code>SELECT * FROM patient_info WHERE patient_id = 123</code>).</li>
+                <li>The database returns the data to the application.</li>
+                <li>The application (running on a separate server) preprocesses the data (featurization).</li>
+                <li>It then sends this data to an ML model (often served as a microservice).</li>
+                <li>The model returns a prediction to the application.</li>
+                <li>The application finally does something with the result.</li>
+            </ol>
+
+            <img src="postimages/raven1.PNG" alt="raven1">
+
+            <p>This siloed architecture is a performance and governance nightmare:</p>
+            <ul>
+                <li><strong>Massive Data Movement:</strong> You are constantly shuttling data out of the database, over the network, and into your application's memory, only to throw most of it away.</li>
+                <li><strong>No Holistic Optimization:</strong> The database has no idea why the application needs the data. It might diligently perform a complex JOIN to retrieve 10 million rows, but the application only needed two columns for its model. The database and the ML runtime are "dumb" to each other's needs.</li>
+                <li><strong>Broken Governance:</strong> Sensitive data is now in two (or more) places: the secure RDBMS and the application server's memory. This doubles the attack surface and creates an auditing black hole.</li>
+            </ul>
+
+            <h3>The Raven Approach: A Unified "To-Do List"</h3>
+            <p>The Raven team recognized that the RDBMS is already a highly sophisticated query optimizer. The goal should be to extend this optimization power to include ML operators.</p>
+            <p>The core idea is a <strong>Unified Intermediate Representation (IR)</strong>. An IR is just a "to-do list" that a system generates from a query. A database's IR has steps like Scan, Join, and Filter. An ML framework's IR has steps like MatrixMultiply and StandardScaler. Raven's insight was to create a single, unified IR that includes both relational operators and ML operators in one graph.</p>
+            <p>The workflow looks like this:</p>
+
+            <img src="postimages/raven2.PNG" alt="raven2">
+
+            <ol>
+                <li><strong>Input:</strong> An analyst writes a SQL query (Q) that calls a model. A data scientist provides the model pipeline (M), (e.g., in Python/scikit-learn).</li>
+                <li><strong>Static Analysis:</strong> Raven parses both the SQL query and the Python model, translating them into a single Unified IR graph. Now, data tables, SQL <code>JOIN</code>s, <code>CategoricalEncoding</code> steps, and the <code>DecisionTreeClassifier</code> are all nodes in the same plan.</li>
+                <li><strong>Cross-Optimization:</strong> This is the magic. The Raven optimizer now rewrites this unified graph, passing information between the database and ML nodes.</li>
+                <li><strong>Execution:</strong> The final, optimized plan is executed by a deeply integrated <code>SQL Server + ONNX Runtime</code> engine.</li>
+            </ol>
+
+            <h3>Soar Beyond The Silo: 4 Powerful Cross-Optimizations</h3>
+            <p>Because Raven sees the <strong>entire end-to-end plan</strong>, it can perform optimizations that are impossible in a siloed system.</p>
+
+            <h4>1. Predicate-Based Model Pruning (Data-to-Model)</h4>
+            <img src="postimages/raven3.PNG" alt="raven3">
+            <p>This optimization "pushes" information from the SQL query into the ML model to simplify it.</p>
+            <ul>
+                <li><strong>What it is:</strong> Imagine your SQL query has a <code>WHERE pregnant = 1</code> clause. In a traditional system, the database filters the data, and then the model runs. In Raven, the optimizer sees this predicate and propagates it into the decision tree model itself. It can statically "prune" any branch of the tree that starts with <code>pregnant = 0</code>, as it knows that branch will never be taken.</li>
+                <li><strong>The Impact:</strong> The model itself becomes simpler and faster to execute at query time.</li>
+            </ul>
+
+            <h4>2. Model-Projection Pushdown (Model-to-Data)</h4>
+            <img src="postimages/raven4.PNG" alt="raven4">
+            <p>This is the reverse: the optimizer "pushes" information from the ML model down into the database query.</p>
+            <ul>
+                <li><strong>What it is:</strong> Many ML models end up with many "zero-weight" features. These features are useless—they are multiplied by zero and have no impact on the final prediction. Raven's optimizer inspects the model, identifies these zero-weight features, and adds a <code>PROJECT</code> operator early in the database plan to discard those columns.</li>
+                <li><strong>The Impact:</strong> The database doesn't even bother reading useless columns from disk. Better yet, if a JOIN operation's only purpose was to retrieve a feature that is now known to be useless, that entire <code>JOIN</code> can be eliminated. This optimization alone yielded speedups of up to <strong>5.3x</strong> in the paper's tests.</li>
+            </ul>
+
+            <h4>3. Model Inlining</h4>
+            <img src="postimages/raven5.PNG" alt="raven5">
+            <p>This optimization completely erases the line between the model and the database engine.</p>
+            <ul>
+                <li><strong>What it is:</strong> Some ML models, like a decision tree, are fundamentally just a set of <code>IF/THEN/ELSE</code> rules. Raven can translate these simple models directly into an equivalent SQL User-Defined Function (UDF). Modern SQL servers can then "inline" this UDF, effectively making the model's logic a native part of the SQL query plan.</li>
+                <li><strong>The Impact:</strong> This eliminates all overhead of calling an external ML runtime. In the paper's evaluation, inlining a decision tree sped up the query by <strong>~17x</strong>. When combined with the predicate pruning from "Predicate-Based Model Pruning", the total speedup reached <strong>24.5x</strong>.</li>
+            </ul>
+
+            <h4>4. NN Translation</h4>
+            <img src="postimages/raven6.PNG" alt="raven6">
+            <p>This optimization acts as a "universal adapter" to leverage high-performance hardware.</p>
+            <ul>
+                <li><strong>What it is:</strong> Classical ML frameworks like scikit-learn are not always optimized for modern parallel hardware like GPUs. Highly-optimized Neural Network (NN) runtimes, like ONNX Runtime, are. Raven introduces transformations that can rewrite classical models (like Random Forests) and featurizers into equivalent neural networks.</li>
+                <li><strong>The Impact:</strong> This allows a "classical" ML pipeline to be executed by the highly efficient, hardware-accelerated ONNX Runtime, unlocking GPU acceleration. This translation gave a <strong>15x</strong> speedup over scikit-learn on a GPU for 1 million rows.</li>
+            </ul>
+
+            <p>By using those cross-optimizations, Raven's final goal is to construct cost-based  cascades optimizer.</p>
+
+            <h3>The Surprising Result: Beating Standalone Frameworks</h3>
+            <p>The cross-optimizations are powerful, but the most telling result from the paper answers the original question: What about a head-to-head comparison for pure inference?</p>
+            <p>The team compared their integrated <code>Raven (SQL Server + ONNX Runtime)</code> against a standalone <code>ONNX Runtime (ORT)</code> just reading from a file.</p>
+            <ul>
+                <li>For small datasets (up to 50K tuples), Raven was faster. Why? SQL Server has sophisticated caching for models and inference sessions, avoiding the overhead ( <15%) of loading the model from disk.</li>
+                <li>For very large datasets (1M-10M tuples), Raven was up to <strong>5.5x</strong> faster than the standalone ONNX Runtime.</li>
+            </ul>
+
+            <p>This result is stunning. How can a "bloated" database beat a lean, dedicated C++ inference engine?</p>
+            <p>The answer: <strong>automatic parallelism.</strong></p>
+            <p>When SQL Server was given the query, its mature optimizer automatically parallelized both the data scan and the <code>PREDICT</code> operation across all available CPU cores. The standalone ONNX Runtime did not, running sequentially. While one could manually parallelize the work for the standalone framework, it's non-trivial. Raven got this massive performance boost for free, simply by piggybacking on decades of RDBMS optimization research.</p>
+
+            <h3>Final Thoughts</h3>
+            <p>The Raven paper shows that the long-held assumption—that databases are for data and ML frameworks are for models—is not just outdated, but suboptimal. By treating ML inference as a first-class citizen within the database, we don't just solve enterprise governance problems; we unlock a new class of "cross-domain" optimizations that are impossible when the two systems live in separate silos.</p>
+            <p>This work suggests a future where the line between data processing and ML inference blurs completely. The database engine, far from being a "dumb" data store, is poised to become the central, highly-optimized, and secure hub for both.</p>
+            
+            <!-- 
+              BLOG POST CONTENT ENDS HERE
+            -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hanwool Kim. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
